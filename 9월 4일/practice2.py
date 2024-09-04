@@ -1,3 +1,5 @@
-name = "Keimyung Kim"
-age = 23
-print(f"My last name is {name}, and last year I was {age} years old.")
+a = "20230331Rainy"
+date=a[0:8]
+weather=a[8:]
+print(date)
+print(weather)
