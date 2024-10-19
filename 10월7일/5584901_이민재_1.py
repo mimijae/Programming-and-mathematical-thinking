@@ -15,7 +15,7 @@ def multiply(a, b):
 
 # 나눗셈 함수
 def divide(a, b):
-    return a / b  # a를 b로 나눈 값을 반환ㅅ
+    return a / b  # a를 b로 나눈 값을 반환
 
 # 함수들을 테스트
 print(add(7, 4))        # 7 + 4 = 11

@@ -4,9 +4,13 @@
 # print(lcm(36, 24))
 
 def gcd(num1, num2):
-    while num2 != 0:
-        num1, num2 = num2, num1 % num2
-    return num1
+    # 두 수 중 작은 값까지만 반복
+    min_num = min(num1, num2)
+    gcd_value = 1  # 기본적으로 1은 모든 수의 공통 약수
+    for i in range(1, min_num + 1):
+        if num1 % i == 0 and num2 % i == 0:
+            gcd_value = i  # 공통 약수 업데이트
+    return gcd_value
 
 def lcm(num1, num2):
     return (num1 * num2) // gcd(num1, num2)
