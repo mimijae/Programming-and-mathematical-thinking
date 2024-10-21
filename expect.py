@@ -6,8 +6,7 @@
 # 2, 3, 5, 7, 11, 13, 17, ..., 97
 # ```
 
-prime = list(map(int, input().split()))
-
+prime = []
 for n in range(2,100):
     is_prime=True
     for i in range(2,n):
@@ -311,3 +310,95 @@ for i in range(n):
 # nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
 # length = remove_duplicates(nums)
 # print(length)
+
+
+# # //====================================================================================================================================//
+
+
+# 문제 5: 단어 개수 세기
+# 사용자로부터 문장을 입력받아, 문장에 포함된 단어의 개수를 출력하는 프로그램을 작성하시오.
+
+# 입력 예시:
+# 문장을 입력하시오: This is a simple sentence.
+
+# 출력 예시:
+# 단어 개수: 5
+
+# def count_words(sentence):
+#     words = sentence.split()
+#     return len(words)
+
+# sentence = input("문장을 입력하시오: ")
+# print(f"단어 개수: {count_words(sentence)}")
+
+
+
+# //====================================================================================================================================//
+
+
+# 문제: 윤년인지 판별하기
+
+# 사용자로부터 연도를 입력받아, 해당 연도가 윤년인지 아닌지를 출력하는 프로그램을 작성하시오.
+
+# 윤년의 조건:
+# 1. 연도가 4로 나누어떨어지지만, 100으로 나누어떨어지지 않는 경우는 윤년이다.
+# 2. 또는 연도가 400으로 나누어떨어지면 윤년이다.
+
+# 입력 예시:
+# 연도를 입력하시오: 2024
+
+# 출력 예시:
+# 2024년은 윤년입니다.
+
+# 입력 예시:
+# 연도를 입력하시오: 1900
+
+# 출력 예시:
+# 1900년은 윤년이 아닙니다.
+
+# def is_leap_year(year):
+#     # 4로 나누어 떨어지면서 100으로는 나누어 떨어지지 않거나, 400으로 나누어 떨어지면 윤년
+#     if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+#         return True
+#     else:
+#         return False
+
+# # 사용자로부터 연도 입력받기
+# year = int(input("연도를 입력하시오: "))
+
+# # 윤년 여부 확인 및 출력
+# if is_leap_year(year):
+#     print(f"{year}년은 윤년입니다.")
+# else:
+#     print(f"{year}년은 윤년이 아닙니다.")
+
+
+# //====================================================================================================================================//
+
+# 돈 구하는 문제
+
+# def currency_breakdown(amount):
+#     # 화폐 단위를 큰 순서대로 리스트에 저장
+#     denominations = [50000, 10000, 1000, 500, 100, 50, 10, 1]
+#     counts = []  # 각 화폐 단위의 개수를 저장할 리스트
+
+#     # 각 화폐 단위로 나누어 몇 개가 필요한지 계산
+#     for denomination in denominations:
+#         count = amount // denomination
+#         counts.append(count)
+#         amount %= denomination
+
+#     # 결과 출력
+#     print(f"오만원권: {counts[0]}개")
+#     print(f"만원권: {counts[1]}개")
+#     print(f"천원권: {counts[2]}개")
+#     print(f"500원 동전: {counts[3]}개")
+#     print(f"100원 동전: {counts[4]}개")
+#     print(f"50원 동전: {counts[5]}개")
+#     print(f"10원 동전: {counts[6]}개")
+#     print(f"1원 동전: {counts[7]}개")
+
+# # 사용자로부터 금액 입력받기
+# amount = int(input("금액을 입력하시오: "))
+# currency_breakdown(amount)
+
