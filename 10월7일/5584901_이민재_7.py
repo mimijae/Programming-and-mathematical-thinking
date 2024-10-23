@@ -3,14 +3,28 @@
 # ... # 생략된 부분
 # print_char('+', 4)
 # 실행결과:
+
+
+#    +
+#   ++
+#  +++
+# ++++
+
+def print_char(c, n):
+    for i in range(0, n):
+        print((" "*(n-i-1)+c*(i+1)))
+
+print_char('+', 4)
+
+
+
 # +
 # + +
 # + + +
 # + + + +
 
-
 def print_char(c, n):
     for i in range(0, n):
-        print((" "*(n-i-1)+c*(i+1)))
+        print((c*(i+1)+" "*(n-i-1)))
 
 print_char('+', 4)

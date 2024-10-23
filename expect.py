@@ -402,3 +402,29 @@ for i in range(n):
 # amount = int(input("금액을 입력하시오: "))
 # currency_breakdown(amount)
 
+
+# //====================================================================================================================================//
+
+def find_min_max(a, b, c):
+    # 초기값 설정
+    min_value = a
+    max_value = a
+    
+    # b와 비교하여 최소값, 최대값 업데이트
+    if b < min_value:
+        min_value = b
+    if b > max_value:
+        max_value = b
+    
+    # c와 비교하여 최소값, 최대값 업데이트
+    if c < min_value:
+        min_value = c
+    if c > max_value:
+        max_value = c
+    
+    # 최소값과 최대값을 튜플로 반환
+    return (min_value, max_value)
+
+# 예시 실행
+print(find_min_max(3, 1, 2))  # 출력: (1, 3)
+print(find_min_max(-5, 10, 0)) # 출력: (-5, 10)

@@ -9,5 +9,3 @@ n = 9
 
 for i in range(5):
     print(" " * i + "O" * (n - 2 * i))
-
-
