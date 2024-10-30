@@ -32,8 +32,8 @@ ball_size = 60  # 크기를 더 크게
 # 빨간색 공 초기 위치, 크기, 속도
 red_ball_x = int(WINDOW_WIDTH / 3)
 red_ball_y = int(WINDOW_HEIGHT / 3)
-red_ball_dx = 6  # 빨간 공 속도
-red_ball_dy = 6
+red_ball_dx = 30  # 빨간 공 속도
+red_ball_dy = 30
 red_ball_size = 50  # 빨간 공 크기
 
 # 게임 종료 전까지 반복
